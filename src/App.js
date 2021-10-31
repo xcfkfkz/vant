@@ -1,22 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { store, useSelector } from 'hodux';
 import './App.css';
 
+const context = store({
+  a: 1,
+  b: 1,
+  get c() {
+    return context.a + context.b
+  }
+});
+
 function App() {
+  const [a, b, c] = useSelector(() => [context.a, context.b, context.c]);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {a} + {b} = {c}
+        <button onClick={() => context.a++}>a+</button>
+        <button onClick={() => context.b++}>b+</button>
       </header>
     </div>
   );
