@@ -1,23 +1,18 @@
 import React from 'react';
-import { store, useSelector } from 'hodux';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SelectPro from './SelectPro';
+import ChangeAmount from './ChangeAmount';
 import './App.css';
-
-const context = store({
-  a: 1,
-  b: 1,
-  get c() {
-    return context.a + context.b
-  }
-});
-
 function App() {
-  const [a, b, c] = useSelector(() => [context.a, context.b, context.c]);
   return (
     <div className="App">
       <header className="App-header">
-        {a} + {b} = {c}
-        <button onClick={() => context.a++}>a+</button>
-        <button onClick={() => context.b++}>b+</button>
+        <Router>
+          <Routes>
+            <Route path="/selectPro" element={<SelectPro />} />
+            <Route path="/changeAmount" element={<ChangeAmount />} />
+          </Routes>
+        </Router>
       </header>
     </div>
   );
