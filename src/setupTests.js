@@ -1,3 +1,2 @@
-<<<<<<< HEAD
-// 远程3 xian
+// 远程4 hou
 import '@testing-library/jest-dom';
