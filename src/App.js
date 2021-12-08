@@ -1,7 +1,7 @@
 import React from 'react';
 import { store, useSelector } from 'hodux';
 import './App.css';
-console.log('hello world, 你好 世界')
+console.log('hello world, 你好 世界，nihao shijie')
 const context = store({
   a: 1,
   b: 1,
