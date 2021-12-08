@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SelectPro from './SelectPro';
 import ChangeAmount from './ChangeAmount';
 import './App.css';
-console.log('sdsfsdfsd')
+console.log('sdsfsdfsd niishdf')
 function App() {
   return (
     <div className="App">
