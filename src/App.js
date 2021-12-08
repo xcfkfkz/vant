@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SelectPro from './SelectPro';
 import ChangeAmount from './ChangeAmount';
 import './App.css';
-console.log('sdsfsdfsd niishdfdfsdfdfdff是的发生地非法所得')
+console.log('sd是法国代购sd fsdfs')
 function App() {
   return (
     <div className="App">
